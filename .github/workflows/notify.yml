@@ -1,0 +1,30 @@
+name: Notify Merge
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '.gitignore'
+      - 'README.md'
+jobs:
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Notify Merge
+        uses: pullreminders/slack-action@master
+        with:
+          args: '{
+               \"channel\":\"C0570A56XL5\",
+               \"attachments\":[
+                 {
+                   \"text\":\"${{ github.actor }} triggered a deploy of `main` for commit `"${{ github.event.head_commit.message }}"` (`${{ github.sha }}`) to *Production*. :excited:" \",
+                   \"color\":\"#4d91f7\",
+                   \"title\":\"${{ github.repository }}\"
+                 }
+               ]
+             }'
