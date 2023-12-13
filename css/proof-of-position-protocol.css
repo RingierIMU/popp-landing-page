@@ -1461,6 +1461,7 @@
 .spark-foreground-secondary.spark-no-bottom.price-desc {
   text-align: left;
   font-size: 14px;
+  display: none;
 }
 
 .spark-plan-name {
@@ -5349,6 +5350,11 @@
     padding: 16px 20px;
   }
 
+  .spark-button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .spark-nav-menu {
     max-height: 90vh;
     border-bottom-right-radius: 12px;
@@ -6065,6 +6071,10 @@
   .container-4 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .bold-text-13 {
+    font-size: 18px;
   }
 
   .bold-text-15 {
