@@ -1,0 +1,989 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Tue Mar 19 2024 12:54:05 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="65f29ed79e92c7e5c185e0b2" data-wf-site="657716fb79cf8f0fbd8970fd">
+<head>
+  <meta charset="utf-8">
+  <title>Profile | Matthew Page</title>
+  <meta content="POPP - The fastest, easiest way to verify employment history" name="description">
+  <meta content="Profile | Matthew Page" property="og:title">
+  <meta content="POPP - The fastest, easiest way to verify employment history" property="og:description">
+  <meta content="https://v.fastcdn.co/u/c4f10d83/64415987-0-proof-of-position.png" property="og:image">
+  <meta content="Profile | Matthew Page" property="twitter:title">
+  <meta content="POPP - The fastest, easiest way to verify employment history" property="twitter:description">
+  <meta content="https://v.fastcdn.co/u/c4f10d83/64415987-0-proof-of-position.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/popp-frontend.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Poppins:300,regular,italic,500,600,700,800,900"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script async="" src="https://tally.so/widgets/embed.js"></script>
+  <script>
+    // Function to fade in the overlay
+    function fadeInOverlay() {
+      var overlay = document.getElementById('overlay');
+      var button = document.getElementById('verify-my-role');
+      if (overlay) {
+        setTimeout(function() {
+          button.style.display = 'block'; // Set overlay to display:block
+          overlay.style.display = 'block'; // Set overlay to display:block
+          overlay.style.opacity = 1; // Fade in overlay
+        }, 1000); // Wait 1 second before fading in
+      }
+    }
+    // Function for smooth scrolling
+    function smoothScrollTo(targetPosition, duration) {
+        var startPosition = window.scrollY || window.pageYOffset;
+        var distance = targetPosition - startPosition;
+        var startTime = null;
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            var timeElapsed = currentTime - startTime;
+            var scrollProgress = Math.min(timeElapsed / duration, 1);
+            var easedProgress = scrollProgress * (2 - scrollProgress);
+            window.scrollTo(0, startPosition + distance * easedProgress);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+        requestAnimationFrame(animation);
+    }
+    // Function to scroll to anchor with offset
+    function scrollToAnchor() {
+      // Get the element to scroll to
+      var targetElement = document.querySelector('#verify-my-role');
+      // Scroll to the target element
+      if (targetElement) {
+        var windowHeight = window.innerHeight;
+        var targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
+        var targetHeight = targetElement.offsetHeight;
+        var offset = (windowHeight - targetHeight) / 2;
+        var scrollTo = targetOffset - offset;
+        // Set the duration for the scroll (in milliseconds)
+        var scrollDuration = 1000; // Change this value as needed
+        smoothScrollTo(scrollTo, scrollDuration);
+      }
+    }
+    // Check if URL contains verify query parameter
+    function shouldLoadScript() {
+      var urlParams = new URLSearchParams(window.location.search);
+      return urlParams.has('verify');
+    }
+    // Wait for the page to finish loading
+    window.addEventListener('load', function() {
+      if (shouldLoadScript()) {
+        fadeInOverlay(); // Fade in overlay after 1 second
+        setTimeout(scrollToAnchor, 1000); // Scroll to anchor after 1 second
+      }
+    });
+</script>
+</head>
+<body class="body-3">
+  <div class="navbar-logo-left">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-left-container shadow-three w-nav">
+      <div class="nav-wrapper">
+        <div class="navbar-wrapper">
+          <a href="#" class="navbar-brand w-nav-brand"><img src="images/popp_logo.png" loading="lazy" alt="" class="image-2"></a>
+          <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+            <ul role="list" class="nav-menu-two w-list-unstyled">
+              <li>
+                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                  <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 1</a>
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 2</a>
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 3</a>
+                  </nav>
+                </div>
+              </li>
+              <li>
+                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                  <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 1</a>
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 2</a>
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 3</a>
+                  </nav>
+                </div>
+              </li>
+              <li>
+                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                  <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 1</a>
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 2</a>
+                    <a href="#" class="nav-dropdown-link w-dropdown-link">Resource Link 3</a>
+                  </nav>
+                </div>
+              </li>
+              <li></li>
+              <li>
+                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                  <div class="nav-dropdown-toggle nav-link w-dropdown-toggle">
+                    <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                    <div>People</div>
+                  </div>
+                  <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                    <a href="profile-chaka-mofokeng.html" class="nav-dropdown-link w-dropdown-link">Chaka Mofokeng</a>
+                    <a href="profile-makabongwe-masiza.html" class="nav-dropdown-link w-dropdown-link">Makabongwe Masiza</a>
+                    <a href="profile-hugo-drummo.html" class="nav-dropdown-link w-dropdown-link">Hugo Drummo</a>
+                    <a href="profile-siphesihle-magazi.html" class="nav-dropdown-link w-dropdown-link">Siphesihle Magazi</a>
+                    <a href="profile-gareth-edwards.html" class="nav-dropdown-link w-dropdown-link">Gareth Edwards</a>
+                    <a href="profile-kirsten-felbert.html" class="nav-dropdown-link w-dropdown-link">Kirsten Felbert</a>
+                    <a href="profile-matthew-page.html" aria-current="page" class="nav-dropdown-link w-dropdown-link w--current">Matthew Page</a>
+                    <a href="profile-nicole-barends.html" class="nav-dropdown-link w-dropdown-link">Nicole Barends</a>
+                  </nav>
+                </div>
+              </li>
+              <li>
+                <div class="nav-divider"></div>
+              </li>
+              <li class="mobile-margin-top-10">
+                <a href="#" class="button-primary sign-in w-button">Sign in</a>
+                <a href="#" class="button-primary w-button">Get Started</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-button w-nav-button">
+            <div class="w-icon-nav-menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="w-embed">
+      <style>
+    /* CSS for overlay */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.15); /* Initially transparent */
+      opacity: 1; /* Initially hidden */
+      transition: opacity 1s; /* Smooth transition */
+      z-index: 99;
+      display:none
+    }
+  </style>
+      <div id="overlay">
+      </div>
+    </div>
+    <div class="w-layout-blockcontainer page-wrapper w-container">
+      <div class="w-row">
+        <div class="column-1 w-col w-col-4">
+          <div class="profile-wrapper">
+            <div class="profile-image-wrapper">
+              <div class="blue-bg"></div><img src="images/1582041023608.jpg" loading="lazy" sizes="(max-width: 479px) 67vw, 150px" srcset="images/1582041023608-p-500.jpg 500w, images/1582041023608.jpg 800w" alt="" class="profile-photo">
+            </div>
+            <div class="profile-details-wrapper">
+              <h3 class="name">Matthew Page</h3>
+              <div class="current-role">Commercial Director</div>
+              <div class="job-description">Cape Town, South Africa</div>
+            </div>
+            <div class="w-layout-vflex about-wrapper">
+              <p class="paragraph centred">An experienced and accomplished business leader, ex strategy consultant and operational transformation professional. <br></p>
+            </div>
+            <div class="divider-100"></div>
+            <div class="verified-wrapper">
+              <div class="remove-flicker w-embed w-script">
+                <!--  This hides your tooltips on publish. Handy if you like to keep them visible in the designer  -->
+                <style>
+.tooltip-anchor {
+	display: none;
+}
+</style>
+                <!--  This prevents elements from being hidden until after Webflow publishes  -->
+                <script></script>
+              </div>
+              <div class="percentage-verified w-embed">
+                <div class="flex-wrapper">
+                  <div class="single-chart">
+                    <svg viewbox="0 0 36 36" class="circular-chart green">
+                      <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                      <path class="circle" stroke-dasharray="93  , 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                      <text x="18" y="20.35" class="percentage">93</text>
+                    </svg>
+                  </div>
+                </div>
+                <style>
+    .flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.single-chart {
+  width: 100%;
+  justify-content: space-around ;
+}
+.circular-chart {
+  display: block;
+  margin: 0px auto;
+  max-width: 100%;
+  max-height: 250px;
+}
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circular-chart.orange .circle {
+  stroke: #f7d060;
+}
+.circular-chart.green .circle {
+  stroke: #98d8aa;
+}
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+.percentage {
+  fill: #636b75;
+    font-size: 0.4em;
+  font-family: sans-serif;
+  text-anchor: middle;
+}
+</style>
+              </div>
+              <div class="tooltip-wrapper">
+                <div data-hover="true" data-delay="0" class="tooltip-dropdown w-dropdown">
+                  <div class="tooltip-content w-dropdown-toggle">
+                    <div class="tooltip-circle">
+                      <div class="text-block-7">What is this?</div>
+                    </div>
+                  </div>
+                  <nav class="tooltip-anchor bottom w-dropdown-list">
+                    <div data-cy="step5" class="tooltip-wrapper-2 left purpose">
+                      <div class="tooltip-container">
+                        <div class="relative">The <strong>Trust Score</strong> is the overall measure of how verified a user&#x27;s POPP Profile is. It ranges from 0 (nothing verified) to 100 (Fully Verified). It considers all of the roles, educational certifications and associated supporting references. It is the aggregated score for all the Trust Scores for each unique role and educational certification that are visible on the user&#x27;s POPP Profile.<br><br>Note: Each unique role and educational certification will also have it&#x27;s own Trust Score.<br></div>
+                      </div>
+                      <div class="tooltip-diamond top left"></div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <h3 class="status">Trust Score</h3>
+              <div class="partially-verified">Partially Verified<br>‍</div>
+            </div>
+            <div class="divider-100"></div>
+            <div class="divider"></div>
+            <div class="divider"></div>
+            <div class="w-layout-vflex about-wrapper linked-accounts">
+              <h1 class="profile-subheading">Linked Accounts</h1>
+              <div class="w-layout-hflex socials-wrapper"><img src="images/LinkedIn.png" loading="lazy" alt="" class="social-icon">
+                <a href="#" class="social-link">Linkedin</a>
+              </div>
+              <div class="w-layout-hflex socials-wrapper"><img src="images/medium-logo.png" loading="lazy" alt="" class="social-icon">
+                <a href="#" class="social-link">Medium</a>
+              </div>
+              <div class="w-layout-hflex socials-wrapper"><img src="images/Github.png" loading="lazy" alt="" class="social-icon">
+                <a href="#" class="social-link">Github</a>
+              </div>
+              <div class="w-layout-hflex socials-wrapper"><img src="images/Website-Logos.png" loading="lazy" alt="" class="social-icon">
+                <a href="#" class="social-link">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-2 w-col w-col-8">
+          <div data-current="Employment History" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs">
+            <div class="tabs-menu w-tab-menu">
+              <a data-w-tab="Employment History" class="tab-link-employment-history w-inline-block w-tab-link w--current">
+                <div class="text-block">Employment History</div>
+              </a>
+              <a data-w-tab="References" class="tab-link-references w-inline-block w-tab-link">
+                <div class="text-block-2">References</div>
+              </a>
+              <a data-w-tab="Education" class="tab-link-education w-inline-block w-tab-link">
+                <div class="text-block-3">Education</div>
+              </a>
+              <a data-w-tab="Skills" class="tab-link-skills w-inline-block w-tab-link">
+                <div class="text-block-6">Skills</div>
+              </a>
+            </div>
+            <div class="tabs-content w-tab-content">
+              <div data-w-tab="Employment History" class="w-tab-pane w--tab-active">
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="w-layout-hflex title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/download.png" alt="" class="company-logo">
+                      <h3 class="block-title">Commercial Director</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">Ringier South Africa - Full Time</div>
+                    <div class="w-layout-hflex pill-wrapper">
+                      <div class="pill">Leadership</div>
+                      <div class="pill">Growth Hacking</div>
+                      <div class="pill">Business Strategy</div>
+                      <div class="pill">Management Consulting</div>
+                    </div>
+                    <div class="job-description">February 2022 - Present  |  2 yrs 2 mos</div>
+                    <div class="job-description">Cape Town, South Africa</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="f0b89ecc-f9bf-4209-7890-cbe67c8869b9" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger first w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">I focus on commercializing our technology solutions, launching new products and services, driving business growthlaying a bridging role between the Product and Tech. </p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points"><strong>•</strong> Product Value Proposition Refinement<br><strong>•</strong> Launching new products and services<br><strong>•</strong> Commercialisation and monetisation of services<br><strong>•</strong> Product and Financial Reporting</div>
+                        </div>
+                        <div class="spacer"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="w-layout-hflex title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/download.png" alt="" class="company-logo">
+                      <h3 class="block-title">Head of Commerce</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">Ringier South Africa - Full Time</div>
+                    <div class="w-layout-hflex pill-wrapper">
+                      <div class="pill">Strategy</div>
+                      <div class="pill">Corporate Finance</div>
+                      <div class="pill">Business Analysis</div>
+                      <div class="pill">Change Managemen</div>
+                    </div>
+                    <div class="job-description">March 2020 - February 2022  |  2 yrs</div>
+                    <div class="job-description">Cape Town, South Africa</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="73251b11-fd84-dc72-e633-c75a4790f384" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger first w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">My focus was to create scalable and repeatable solutions to help businesses improve commercial activities. Our team built tools, software and processes that fundamentally drove sales conversion. We did this by leveraging a wealth of marketplace operational experience, as well as advanced statistical analysis, data mining, ML techniques and data visualization to bring tangible benefits to the customer facing sales teams.</p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points"><strong>•</strong> Creating scalable and repeatable business solutions<br><strong>•</strong> Building tools and software for sales conversion enhancement<br><strong>•</strong> Advanced statistical analysis and data mining proficiency<br><strong>•</strong> Implementation and utilization of Machine Learning (ML) techniques<br><strong>•</strong> Proficient in data visualization to support sales teams<br><strong>•</strong> Extensive marketplace operational experience<br><strong>•</strong> Systematic elimination of guesswork in global commercial strategies<br><strong>•</strong> Knowledge of pricing strategies and customer segmentation<br><strong>•</strong> Expertise in setting up efficient sales and operational practices<br><strong>•</strong> Skilled in data management: storage, cleaning, and ensuring data availability<br><strong>•</strong> Application of advanced analytics through ML and AI<br><strong>•</strong> Leadership of specialized teams in data-driven decision-making processes</div>
+                        </div>
+                        <div class="spacer"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/images.jpg" alt="" class="company-logo round">
+                      <h3 class="block-title">Managing Director, Jobs Platforms</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">ROAM (Ringier One Africa Media) - Full Time</div>
+                    <div class="job-description">January 2018 - March 2020  |  2 yrs 3 mos</div>
+                    <div class="job-description hide">Location, City, Country</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="1622cd95-c032-498b-3bdb-40efc4e0b960" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost hide w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">Head of brands in West Africa - Nigeria and Ghana -(www.jobberman.ng, www.jobberman.com.gh),  brands in East Africa - Brightermonday Kenya, Tanzania and Uganda (www.brighermonday.co.ke, www.brightermonday.co.tz, www.brighermonday.co.ug) and the Pan-African Executive Recruitment company The African Talent Company (www.tatcafrica.com)<br></p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points"><strong>•</strong> Ownership of the aggregated P&amp;Ls across the markets<br><strong>•</strong> Focus on ROI of markets and products<br><strong>•</strong> Building best in class operations<br><strong>•</strong> Deeply understanding market dynamics and requirements and building tailored products to meet the needs now and in the future</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-layout-vflex block-wrapper get-verified-block">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/idAISWHi_F.png" alt="" class="company-logo round">
+                      <h3 class="block-title">Manager</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart orange">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="50, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">50</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Partially <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">Kearney - Full Time</div>
+                    <div class="job-description">January 2017 - December 2018  |  2 yrs</div>
+                    <div class="job-description">Johannesburg, South Africa</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="6e94b970-82d8-738d-2274-42fec9224853" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost hide w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                      <a id="verify-my-role" href="#tally-open=mYQ0G5&amp;tally-layout=modal&amp;tally-width=500&amp;tally-hide-title=1" class="sysf-button sysf-medium sysf-ghost verify-me w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Verify this Role</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">As a Manager, I lead the day-to-day direction of client projects, including the development of consulting teams, ensuring the delivery of superior work to clients, sticking to advanced budgets and schedules and maintaining high utilization rates.</p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points">• Prioritise the issues most critical to the client within the scope of the project • Lead the generation of hypotheses to solve complex issues<br>• Ensure high quality and accurate analysis<br>• Selects the most effective analytical approaches and guide team in applying leading edge techniques<br>• Ensures team develops robust fact base, creatively addressing data constraints<br>• Lead the team in developing insights and prioritising key conclusions<br>• Develop a practical set of recommendations based on impact and ease of implementation<br>• Develop comprehensive and detailed project plans<br>• Effectively manage the project, leveraging appropriate PMO tools and quality controls<br>• Anticipate key project risks and proactively develop and execute mitigation strategies<br>• Ensure project quality and timing expectations are met<br></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/idAISWHi_F.png" alt="" class="company-logo round">
+                      <h3 class="block-title">Associate</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">Kearney - Full Time</div>
+                    <div class="job-description">July 2015 - December 2016  |  1 yrs 6 mos</div>
+                    <div class="job-description">Johannesburg, South Africa</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="383f5c3f-c159-4609-e781-1eeed3ecc1cb" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost hide w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">As an Associate we were involved in every phase of a consulting engagement, from pre-proposal research through final implementation.</p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points">• Consult on and manage the day-to-day direction of client projects, ensuring work is continually on track, delivering clear benefit to the client in both the short and long term<br>• Demonstrate subject matter expertise in strategy, operations and/or organizational effectiveness within target industry sectors<br>• Gather and analyse data<br>• Support strategic and tactical initiatives to identify, develop and extend client relationships<br>• Conduct benchmarking, best practices and other competitor assessment studies<br>• Generate proposals and lead certain client and analyst teams<br>• Recommend actions and help clients implement them<br>• Become responsible for creation of intellectual capital and knowledge development within the firm<br>• Align on industry and service practices in order to grow subject matter expertise both locally and within the firm as a whole<br></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/idAISWHi_F.png" alt="" class="company-logo round">
+                      <h3 class="block-title">Senior Business Analyst</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">Kearney - Full Time</div>
+                    <div class="job-description">July 2014 - June 2015  |  1 yrs</div>
+                    <div class="job-description">Johannesburg, South Africa</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="19e9027e-da7c-96c0-1068-03d24c7cfee6" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost hide w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">As a Senior Business Analyst I was mandated with more independence to work with client teams and contribute ideas, opinions and new information. The nature and scope of the work did not differ substantially from Business Analysts, but rather the degree of independence and expectations on quality of deliverables.</p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points">• Engaging with senior-level clients, predominantly at the CXO level<br>• Structuring complex analyses to address high-level business challenges<br>• Delivering findings and strategic insights to top executives<br>• Playing an active role in the professional development of junior team members<br>• Fostering an environment conducive to knowledge transfer within the firm<br>• Ensuring the sustainability of expertise for future succession planning within the company<br></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/idAISWHi_F.png" alt="" class="company-logo round">
+                      <h3 class="block-title">Business Analyst</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex block-content-wrap">
+                    <div class="job-title">Kearney - Full Time</div>
+                    <div class="job-description">January 2013 - June 2014  |  1 yrs 6 mos</div>
+                    <div class="job-description">Johannesburg, South Africa</div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="e0ca937b-01c4-c685-6fe0-1d27a1b87eb1" href="#" class="sysf-button sysf-medium sysf-ghost etherscan w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">View on Etherscan</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                      <a href="#References" class="sysf-button sysf-medium sysf-ghost hide w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
+                        </div>
+                      </a>
+                    </div>
+                    <div role="region" class="more-details-wrap">
+                      <a aria-controls="accordion1" role="button" aria-expanded="false" href="#" class="more-details-trigger w-inline-block">
+                        <h3 class="show-more-details">Show More Details<strong><br></strong></h3>
+                        <div class="show-more-icon">
+                          <div class="icon w-icon-dropdown-toggle"></div>
+                        </div>
+                      </a>
+                      <div id="accordion1" aria-hidden="true" class="more-details-dropdown">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Description</h5>
+                          <p class="description-text">As an analyst I contributed as a full member of the client team, where I was expected to contribute ideas, opinions, and new information. As a Business Analyst I had experience in multiple industries and geographies and learnt the back-bone of my analytical and quantitative abilities. I was also fortunate to be given ample opportunity to practice delivering important presentations to clients and in so doing enhance my delivery capabilities.</p>
+                          <h5 class="more-details-heading">Key Skills &amp; Requirements</h5>
+                          <div class="bullet-points">• Working with experienced consultants to develop models, perform complex analyses, and work on research assignments at both the office and client sites<br>• Often travelling while on assignments, undertaking a broad range of activities while gaining exposure to the business world.<br>• Participating in marketing activities and preparing proposals for new engagement opportunities<br></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-w-tab="References" class="w-tab-pane">
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/download.png" alt="" class="company-logo references">
+                      <h3 class="block-title">Ringier South Africa </h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="reference-block-wrap">
+                    <div class="w-layout-hflex reference-name-wrap"><img loading="lazy" src="images/65d5eaf8238efbf5235d1d13_profile-p-500.jpg" alt="" class="reference-photo">
+                      <div class="ref-person-wrap">
+                        <h5 class="rating-title"><strong>Nils Körber</strong></h5>
+                        <div class="ref-role">Managing Director</div>
+                        <div class="ref-interaction">Nils managed Matthew directly</div>
+                      </div>
+                    </div>
+                    <div class="w-layout-hflex block-content-wrap reference">
+                      <p class="reference-teaser">Hugo has all the qualities to be the best Product Manager. He has done very well within the 1 year and 6 months that I worked with him.... </p>
+                      <div class="read-more-overlay"></div>
+                    </div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="bad69c94-e1b4-a3c2-ae7f-8658ab075912" href="#" class="sysf-button sysf-medium sysf-ghost w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Request Full Reference from Nils</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="reference-block-wrap"></div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/images.jpg" alt="" class="company-logo round">
+                      <h3 class="block-title">ROAM (Ringier One Africa Media)</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully <br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="reference-block-wrap">
+                    <div class="w-layout-hflex reference-name-wrap"><img sizes="60px" srcset="images/profile-woman-p-500.png 500w, images/profile-woman.png 638w" alt="" src="images/profile-woman.png" loading="lazy" class="reference-photo">
+                      <div class="ref-person-wrap">
+                        <h5 class="rating-title">Nicole Barends</h5>
+                        <div class="ref-role">Head of HR<br></div>
+                        <div class="ref-interaction">Nicole worked with Matthew</div>
+                      </div>
+                    </div>
+                    <div class="w-layout-hflex block-content-wrap reference">
+                      <p class="description-text">Hugo, brings fresh and brilliant ideas. He thinks out of the box and creates unique solutions. Good listener and take all the information into action. Committed to his work and good with time management...</p>
+                      <div class="read-more-overlay"></div>
+                    </div>
+                    <div class="w-layout-hflex button-wrap">
+                      <a data-w-id="3fef2f82-ae26-0e06-49a0-f15d28a7cec2" href="#" class="sysf-button sysf-medium sysf-ghost w-inline-block">
+                        <div class="sysf-button-content-wrapper">
+                          <div class="sysf-button-text">Request Full Reference from Nicole</div>
+                          <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="reference-block-wrap"></div>
+                </div>
+              </div>
+              <div data-w-tab="Education" class="w-tab-pane">
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="w-layout-hflex title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap education">
+                      <h3 class="block-title education">Bachelor of Commerce (BCom) Honours, Economics</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully<br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="educational-instituion">University of Cape Town</div>
+                  <div class="education-period">Graduated - 2012</div>
+                  <div class="divider-100 hide"></div>
+                </div>
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="w-layout-hflex title-wrapper">
+                    <div class="w-layout-hflex block-title-wrap education">
+                      <h3 class="block-title education">Business Science Quantitative Management, Statistics</h3>
+                    </div>
+                    <div class="verified-wrapper small">
+                      <div class="percentage-verified-small w-embed">
+                        <div class="flex-wrapper">
+                          <div class="single-chart">
+                            <svg viewbox="0 0 36 36" class="circular-chart green">
+                              <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                              <text x="18" y="20.35" class="percentage">100</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="verified-smal">Fully<br>Verified</div>
+                    </div>
+                  </div>
+                  <div class="educational-instituion">University of Cape Town</div>
+                  <div class="education-period">Graduated - 2011</div>
+                  <div class="divider-100 hide"></div>
+                </div>
+              </div>
+              <div data-w-tab="Skills" class="w-tab-pane">
+                <div class="w-layout-vflex block-wrapper">
+                  <div class="w-layout-hflex block-content-wrap education">
+                    <div role="region" class="more-details-wrap">
+                      <div id="accordion1" aria-hidden="true" class="education-block">
+                        <div class="spacer">
+                          <h5 class="more-details-heading">Skills</h5>
+                        </div>
+                      </div>
+                      <div class="w-layout-hflex pill-wrapper">
+                        <div class="pill">Gsuite</div>
+                        <div class="pill">Jira</div>
+                        <div class="pill">Monday</div>
+                        <div class="pill">Leapsome</div>
+                        <div class="pill">Payspace</div>
+                        <div class="pill">Slack</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-layout-hflex pill-wrapper skills">
+                    <div class="pill">Leadership</div>
+                    <div class="pill">Growth Hacking</div>
+                    <div class="pill">Problem Solving</div>
+                    <div class="pill">Business Strategy</div>
+                    <div class="pill">Management Consulting</div>
+                    <div class="pill">Strategy</div>
+                    <div class="pill">Corporate Finance</div>
+                    <div class="pill">Business Analysis</div>
+                    <div class="pill">Business Process Improvement</div>
+                    <div class="pill">Economics</div>
+                    <div class="pill">Change Management</div>
+                    <div class="pill">Business Planning</div>
+                    <div class="pill">Analysis</div>
+                    <div class="pill">Analysis</div>
+                    <div class="pill">Valuation</div>
+                    <div class="pill">Microsoft Office</div>
+                    <div class="pill">Financial Analysis</div>
+                    <div class="pill">Analytical Skills</div>
+                    <div class="pill">Strategic Planning</div>
+                    <div class="pill">Human Resources</div>
+                    <div class="pill">HRIS</div>
+                    <div class="pill">Recruiting</div>
+                    <div class="pill">Microsoft Excel</div>
+                    <div class="pill">Power BI</div>
+                    <div class="pill">Sales</div>
+                    <div class="pill">Project Management</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=657716fb79cf8f0fbd8970fd" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+$( function() {
+    function changeTab() {
+        var tabName = window.location.hash.substr(1);
+        var tabEl = $('[data-w-tab="' + tabName + '"]');
+        if (tabEl.length) {
+            tabEl.click();
+        }
+    }
+    //when page is first loaded
+    if(window.location.hash){
+        changeTab();
+    }
+    //internal page linking
+    $(window).on('hashchange', changeTab);
+    $('[data-w-tab]').on('click', function(){
+        history.pushState({}, '', '#'+$(this).data("w-tab"));
+    });
+});
+</script>
+</body>
+</html>
