@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Wed Mar 20 2024 08:16:01 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Wed Mar 20 2024 08:48:22 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="65eb0c923cace74f6a3fa338" data-wf-site="657716fb79cf8f0fbd8970fd">
 <head>
   <meta charset="utf-8">
@@ -39,8 +39,10 @@
     function fadeInOverlay() {
       var overlay = document.getElementById('overlay');
       var button = document.getElementById('verify-my-role');
+      var refbutton = document.getElementById('verify-block-ref-btn');
       if (overlay) {
         setTimeout(function() {
+          refbutton.style.display = 'none'; // Set overlay to display:block
           button.style.display = 'block'; // Set overlay to display:block
           overlay.style.display = 'block'; // Set overlay to display:block
           overlay.style.opacity = 1; // Fade in overlay
@@ -374,11 +376,6 @@
                     <div class="w-layout-hflex block-title-wrap"><img loading="lazy" src="images/image002.png" alt="" class="company-logo">
                       <h3 class="block-title">Coastal HR Manager</h3>
                     </div>
-                    <a id="verify-my-role" href="#tally-open=mYQ0G5&amp;tally-layout=modal&amp;tally-width=500&amp;tally-hide-title=1" class="sysf-button sysf-medium sysf-ghost verify-me w-inline-block">
-                      <div class="sysf-button-content-wrapper">
-                        <div class="sysf-button-text">Verify Me</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
-                      </div>
-                    </a>
                     <div class="verified-wrapper small">
                       <div class="percentage-verified-small w-embed">
                         <div class="flex-wrapper">
@@ -409,12 +406,12 @@
                           <div class="icon-wrapper"><img loading="lazy" src="images/go.svg" alt="" class="button-icon"><img style="opacity:1;display:none" loading="lazy" alt="" src="images/go-hover.svg" class="button-icon hover"></div>
                         </div>
                       </a>
-                      <a href="#References" class="sysf-button sysf-medium sysf-ghost w-inline-block">
+                      <a id="verify-block-ref-btn" href="#References" class="sysf-button sysf-medium sysf-ghost w-inline-block">
                         <div class="sysf-button-content-wrapper">
                           <div class="sysf-button-text">Show References</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
                         </div>
                       </a>
-                      <a id="verify-my-role" href="#tally-open=mYQ0G5&amp;tally-layout=modal&amp;tally-width=500&amp;tally-hide-title=1" class="sysf-button sysf-medium sysf-ghost verify-me w-inline-block">
+                      <a id="verify-my-role" href="#tally-open=mYQ0G5&amp;tally-layout=modal&amp;tally-width=500&amp;tally-hide-title=1&amp;profile=nicole-barends" class="sysf-button sysf-medium sysf-ghost verify-me w-inline-block">
                         <div class="sysf-button-content-wrapper">
                           <div class="sysf-button-text">Verify this Role</div><img sizes="100vw" srcset="images/open-external-link-icon-p-500.png 500w, images/open-external-link-icon.png 512w" alt="" src="images/open-external-link-icon.png" loading="lazy" class="button-icon no-icon">
                         </div>

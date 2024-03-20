@@ -1942,6 +1942,8 @@
 
   .button-wrap {
     flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .sysf-button-content-wrapper {
@@ -1955,6 +1957,12 @@
   .sysf-button.sysf-medium.sysf-ghost {
     width: auto;
     min-width: auto;
+  }
+
+  .sysf-button.sysf-medium.sysf-ghost.verify-me {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
   }
 
   .spacer {
