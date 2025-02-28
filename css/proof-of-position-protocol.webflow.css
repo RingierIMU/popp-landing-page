@@ -733,14 +733,7 @@
   inset: 0% 0% auto auto;
 }
 
-.fs_modal-2_close:focus-visible {
-  outline-color: var(--accessible-components-dark-grey);
-  outline-offset: 4px;
-  outline-width: 2px;
-  outline-style: solid;
-}
-
-.fs_modal-2_close[data-wf-focus-visible] {
+.fs_modal-2_close:focus-visible, .fs_modal-2_close[data-wf-focus-visible] {
   outline-color: var(--accessible-components-dark-grey);
   outline-offset: 4px;
   outline-width: 2px;
@@ -815,14 +808,7 @@
   padding: .5rem 1rem;
 }
 
-.fs_modal-2_button:focus-visible {
-  outline-color: var(--accessible-components-dark-grey);
-  outline-offset: 4px;
-  outline-width: 2px;
-  outline-style: solid;
-}
-
-.fs_modal-2_button[data-wf-focus-visible] {
+.fs_modal-2_button:focus-visible, .fs_modal-2_button[data-wf-focus-visible] {
   outline-color: var(--accessible-components-dark-grey);
   outline-offset: 4px;
   outline-width: 2px;
